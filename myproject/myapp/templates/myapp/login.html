@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* Google Button Styles */
+        .google-btn {
+            background-color: #4285F4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .google-btn:hover {
+            background-color: #357ae8;
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        .google-btn i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        {% load socialaccount %}
+<h2>Login</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
+<h3>Or log in with:</h3>
+<ul>
+    {% providers_media_js %}
+    {% for provider in socialaccount_providers %}
+        <li>
+            <a href="{% provider_login_url 'google' %}" class="google-btn">
+                <i class="fab fa-google"></i> Log in with Google
+            </a>
+            
+
+        </li>
+    {% endfor %}
+</ul>   
+</div>
+</body>
+</html>

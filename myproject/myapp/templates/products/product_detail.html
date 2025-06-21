@@ -1,0 +1,20 @@
+<!-- templates/products/product_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product.product_name }}</title>
+</head>
+<body>
+    <h1>{{ product.product_name }}</h1>
+    <img src="{{ product.product_image.url }}" alt="{{ product.product_name }}" style="width: 300px; height: auto;">
+    <p>Brand: {{ product.brand_name }}</p>
+    <p>Price: ${{ product.selling_price }}</p>
+    <p>Original Price: ${{ product.original_price }}</p>
+    <p>Sizes: {{ product.available_sizes }}</p>
+    <p>Warranty: {{ product.warranty }}</p>
+    <p>Ratings: {{ product.ratings }}</p>
+    <p>{{ product.description }}</p>
+    <p>{% if product.stock_availability %}In Stock{% else %}Out of Stock{% endif %}</p>
+</body>
+</html>

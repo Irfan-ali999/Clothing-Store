@@ -1,0 +1,145 @@
+
+
+
+/* slider */
+/* For Tablets */
+@media (max-width: 1024px) {
+    :root {
+        --radius: calc(100vw / 8); /* Adjust radius for tablets */
+    }
+
+    .slider .list .item {
+        width: calc(var(--radius) * 1.0); /* Adjust item size */
+        height: calc(var(--radius) * 1.0);
+    }
+
+    .slider .list .item img {
+        width: 70%; /* Reduce image size */
+    }
+}
+
+/* For Mobile Screens */
+@media (max-width: 768px) {
+    :root {
+        --radius: calc(100vw / 10); /* Adjust radius for mobile */
+    }
+
+    .slider .list .item {
+        width: calc(var(--radius) * 1.1); /* Adjust item size */
+        height: calc(var(--radius) * 1.1);
+    }
+
+    .slider .list .item img {
+        width: 60%; /* Reduce image size further */
+    }
+}
+
+/* For Extra Small Screens */
+@media (max-width: 480px) {
+    :root {
+        --radius: calc(100vw / 12); /* Adjust radius for smaller screens */
+    }
+
+    .slider {
+        height: 50vh; /* Reduce height for extra small screens */
+    }
+
+    .slider .list .item {
+        width: calc(var(--radius)); /* Further reduce size */
+        height: calc(var(--radius));
+    }
+
+    .slider .list .item img {
+        width: 50%; /* Further adjust image size */
+    }
+
+    #prev,
+    #next {
+        width: 35px; /* Reduce button size */
+        height: 35px;
+        font-size: medium;
+    }
+}
+
+
+/* Categories */
+@media (max-width: 768px) {
+    .categories-section h2 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    .categories-section .card {
+        width: 150px; /* Reduce size for smaller screens */
+        height: 150px;
+    }
+
+    .categories-section .row {
+        gap: 15px; /* Reduce spacing between cards */
+    }
+}
+
+@media (max-width: 480px) {
+    .categories-section h2 {
+        font-size: 1.2rem; /* Further reduce heading size */
+    }
+
+    .categories-section .card {
+        width: 120px; /* Smaller size for very small screens */
+        height: 120px;
+    }
+
+    .categories-section .row {
+        gap: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 48%; /* Adjust layout for mobile screens */
+    }
+    .product-card {
+        height: auto; /* Allow height to adjust for smaller screens */
+    }
+    .product-card-img {
+        height: 150px; /* Reduced image height for smaller screens */
+    }
+    .product-card-body .product-name a {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+/* footer */
+@media (max-width: 768px) {
+    .copyright-area .social-media {
+        text-align: right; /* Center align for all screen sizes */
+        margin-top:  0px;
+        
+    }
+}
+
+/* Responsiveness for Small Screens */
+@media (max-width: 480px) {
+    .copyright-area .social-media a {
+        width: 25px; /* Further reduce size */
+        height: 25px;
+        font-size: 16px; /* Adjust font size for very small screens */
+        line-height: 25px;
+        margin: 0px 6px; /* Smaller spacing between icons */
+    }
+}
